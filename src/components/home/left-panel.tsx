@@ -26,16 +26,17 @@ import {
 import {
   useConversationStore
 } from "@/store/chat-store";
-import {
-  conversations
-} from "@/dummy-data/db"
+// import {
+//   conversations
+// } from "@/dummy-data/db"
 
 const LeftPanel = () => {
   const {
     isAuthenticated,
     isLoading
   } = useConvexAuth();
-  //  const conversations = useQuery(api.conversations.getMyConversations, isAuthenticated ? undefined: "skip");
+
+  const conversations = useQuery(api.conversations.getMyConversations, isAuthenticated ? undefined: "skip");
 
   const {
     selectedConversation,

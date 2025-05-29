@@ -12,9 +12,9 @@ import {
   useEffect,
   useRef
 } from "react";
-import {
-  messages
-} from "@/dummy-data/db"
+// import {
+//   messages
+// } from "@/dummy-data/db"
 
 
 
@@ -22,9 +22,9 @@ const MessageContainer = () => {
   const {
     selectedConversation
   } = useConversationStore();
-  //const messages = useQuery(api.messages.getMessages, {
-  //conversation: selectedConversation!._id,
-  //});
+  const messages = useQuery(api.messages.getMessages, {
+    conversation: selectedConversation!._id,
+  });
   const me = useQuery(api.users.getMe);
   const lastMessageRef = useRef < HTMLDivElement > (null);
 

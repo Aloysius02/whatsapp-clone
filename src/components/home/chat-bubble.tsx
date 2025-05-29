@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 type ChatBubbleProps = {
-  message: any;
+  message: IMessage;
   me: any;
-  previousMessage?: any;
+  previousMessage?: IMessage;
 };
 
 const ChatBubble = ({
